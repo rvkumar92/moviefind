@@ -1,0 +1,31 @@
+{
+  "name": "moviefind",
+  "version": "1.0.0",
+  "description": "Simple movie finder application with react, flux, browserify and gulp",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rvkumar92/moviefind.git"
+  },
+  "author": "rvkumar",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rvkumar92/moviefind/issues"
+  },
+  "homepage": "https://github.com/rvkumar92/moviefind#readme",
+  "devDependencies": {
+    "browserify": "^13.0.0",
+    "flux": "^2.1.1",
+    "gulp": "^3.9.1",
+    "object-assign": "^4.0.1",
+    "reactify": "^1.1.1",
+    "vinyl-source-stream": "^1.1.0"
+  },
+  "dependencies": {
+    "react": "^0.14.7",
+    "react-dom": "^0.14.7"
+  }
+}
