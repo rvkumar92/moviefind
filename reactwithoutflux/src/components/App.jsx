@@ -6,7 +6,7 @@ class App extends Component{
         super(props);
         this.state = {
             movieData: [],
-            movieName: 'frozen'
+            movieName: 'superman'
         }
     }
     getMovieData(){
@@ -28,10 +28,16 @@ class App extends Component{
     componentWillMount(){
         this.getMovieData();
     }
+    setMovieName(movie){
+        this.setState({movieName: movie},function(){
+            this.getMovieData();
+        });
+
+    }
     render(){
         return(
             <div>
-                <Search {...this.state}/>
+                <Search movieName={this.setMovieName.bind(this)}/>
                 <br />
                 <Movie {...this.state} />
             </div>
