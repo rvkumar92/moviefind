@@ -10,7 +10,7 @@ class Search extends Component{
     render(){
         return(
             <div className="search-form">
-                <h4 clasName="text-center">Search Movies</h4>
+                <h4 className="text-center">Search Movies</h4>
                 <form onSubmit={this.handleChange.bind(this)}>
                     <div className="form-group">
                         <input type="text" placeholder="Enter a movie name..." className="form-control"
