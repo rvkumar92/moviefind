@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import Search from './omdb/Search.jsx';
-import Movie from './omdb/Movie.jsx';
+import MoviesList from './omdb/MoviesList.jsx';
 class App extends Component{
     constructor(props){
         super(props);
@@ -11,12 +11,12 @@ class App extends Component{
     }
     getMovieData(){
         $.ajax({
-            url: 'http://www.omdbapi.com/?t='+this.state.movieName+'&y=&plot=short&r=json',
+            url: 'http://www.omdbapi.com/?s='+this.state.movieName,
             dataType: 'json',
             cache: false,
             success: function(data){
-                console.log(data);
-                this.setState({movieData: data});
+                console.log(data.Search);
+                this.setState({movieData: data.Search});
             }.bind(this),
             error: function(xhr, status, error){
                 console.log(data);
@@ -35,11 +35,14 @@ class App extends Component{
 
     }
     render(){
+        if(this.state.movieData != ''){
+            var movieList = <MoviesList movies={this.state.movieData} />;
+        }
         return(
             <div>
                 <Search movieName={this.setMovieName.bind(this)}/>
                 <br />
-                <Movie {...this.state} />
+                {movieList}
             </div>
         )
     }

@@ -9,11 +9,14 @@ class Search extends Component{
     }
     render(){
         return(
-            <div>
-                <h4 clasName="page-header">Search Movies</h4>
+            <div className="search-form">
+                <h4 clasName="text-center">Search Movies</h4>
                 <form onSubmit={this.handleChange.bind(this)}>
-                    <input type="text" placeholder="Enter a movie name..." className="form-control"
+                    <div className="form-group">
+                        <input type="text" placeholder="Enter a movie name..." className="form-control"
                            ref="moviename"/>
+                    </div>
+                    <button className="btn btn-primary btn-block">Search Movies</button>
                 </form>
             </div>
         )

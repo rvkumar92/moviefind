@@ -1,0 +1,12 @@
+.search-form{
+    padding: 0 20px 20px 20px;
+    background: #f4f4f4;
+    border: 1px #ccc solid;
+    border-radius: 10px;
+    width: 100%;
+    margin: auto;
+}
+
+img{
+    width: 100%;
+}
